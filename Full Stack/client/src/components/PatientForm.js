@@ -3,27 +3,27 @@ import { Grid, TextField, Button, FormControl, FormGroup, FormLabel, Container, 
 
 const PatientForm = () => {
     const [formData, setFormData] = useState({
-        HighBP: false,
-        HighChol: false,
-        CholCheck: false,
-        BMI: 0,
-        Smoker: false,
-        Stroke: false,
-        Diabetes: false,
-        PhysActivity: false,
-        Fruits: false,
-        Veggies: false,
-        HvyAlcoholConsump: false,
-        AnyHealthcare: false,
-        NoDocbcCost: false,
-        GenHlth: 0,
-        MentHlth: 0,
-        PhysHlth: 0,
-        DiffWalk: false,
-        Sex: false,
-        Age: 0,
-        Education: 0,
-        Income: 0
+        highBP: false,
+        highChol: false,
+        cholCheck: false,
+        bmi: 0,
+        smoker: false,
+        stroke: false,
+        diabetes: false,
+        physActivity: false,
+        fruits: false,
+        veggies: false,
+        hvyAlcoholConsump: false,
+        anyHealthcare: false,
+        noDocbcCost: false,
+        genHlth: 0,
+        mentHlth: 0,
+        physHlth: 0,
+        diffWalk: false,
+        sex: false,
+        age: 0,
+        education: 0,
+        income: 0
     })
 
     const handleChange = (e) => {
@@ -73,8 +73,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="HighBP"
-                                        checked={formData.HighBP}
+                                        name="highBP"
+                                        checked={formData.highBP}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -86,8 +86,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="HighChol"
-                                        checked={formData.HighChol}
+                                        name="highChol"
+                                        checked={formData.highChol}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -99,8 +99,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="CholCheck"
-                                        checked={formData.CholCheck}
+                                        name="cholCheck"
+                                        checked={formData.cholCheck}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -111,7 +111,7 @@ const PatientForm = () => {
                         <Grid item xs={12}>
                             <TextField
                                 label="BMI"
-                                name="BMI"
+                                name="bmi"
                                 type="number"
                                 onChange={handleChange}
                                 fullWidth
@@ -122,8 +122,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="Smoker"
-                                        checked={formData.Smoker}
+                                        name="smoker"
+                                        checked={formData.smoker}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -135,8 +135,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="Stroke"
-                                        checked={formData.Stroke}
+                                        name="stroke"
+                                        checked={formData.stroke}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -148,8 +148,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="Diabetes"
-                                        checked={formData.Diabetes}
+                                        name="diabetes"
+                                        checked={formData.diabetes}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -161,8 +161,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="PhysActivity"
-                                        checked={formData.PhysActivity}
+                                        name="physActivity"
+                                        checked={formData.physActivity}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -174,8 +174,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="Fruits"
-                                        checked={formData.Fruits}
+                                        name="fruits"
+                                        checked={formData.fruits}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -187,8 +187,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="Veggies"
-                                        checked={formData.Veggies}
+                                        name="veggies"
+                                        checked={formData.veggies}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -200,8 +200,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="HvyAlcoholConsump"
-                                        checked={formData.HvyAlcoholConsump}
+                                        name="hvyAlcoholConsump"
+                                        checked={formData.hvyAlcoholConsump}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -213,8 +213,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="AnyHealthcare"
-                                        checked={formData.AnyHealthcare}
+                                        name="anyHealthcare"
+                                        checked={formData.anyHealthcare}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -226,8 +226,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="NoDocbcCost"
-                                        checked={formData.NoDocbcCost}
+                                        name="noDocbcCost"
+                                        checked={formData.noDocbcCost}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -238,7 +238,7 @@ const PatientForm = () => {
                         <Grid item xs={12}>
                             <TextField
                                 label="GenHlth"
-                                name="GenHlth"
+                                name="genHlth"
                                 type="number"
                                 onChange={handleChange}
                                 fullWidth
@@ -258,7 +258,7 @@ const PatientForm = () => {
                         <Grid item xs={12}>
                             <TextField
                                 label="PhysHlth"
-                                name="PhysHlth"
+                                name="physHlth"
                                 type="number"
                                 onChange={handleChange}
                                 fullWidth
@@ -269,8 +269,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="DiffWalk"
-                                        checked={formData.DiffWalk}
+                                        name="diffWalk"
+                                        checked={formData.diffWalk}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -282,8 +282,8 @@ const PatientForm = () => {
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        name="Sex"
-                                        checked={formData.Sex}
+                                        name="sex"
+                                        checked={formData.sex}
                                         onChange={handleChange}
                                         color="primary"
                                     />
@@ -294,7 +294,7 @@ const PatientForm = () => {
                         <Grid item xs={12}>
                             <TextField
                                 label="Age"
-                                name="Age"
+                                name="age"
                                 type="number"
                                 onChange={handleChange}
                                 fullWidth
@@ -304,7 +304,7 @@ const PatientForm = () => {
                         <Grid item xs={12}>
                             <TextField
                                 label="Education"
-                                name="Education"
+                                name="education"
                                 type="number"
                                 onChange={handleChange}
                                 fullWidth
@@ -314,7 +314,7 @@ const PatientForm = () => {
                         <Grid item xs={12}>
                             <TextField
                                 label="Income"
-                                name="Income"
+                                name="income"
                                 type="number"
                                 onChange={handleChange}
                                 fullWidth

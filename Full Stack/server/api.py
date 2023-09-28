@@ -32,27 +32,27 @@ app.add_middleware(
 
 class PredictionInput(BaseModel):
     # patient_address: str
-    HighBP: bool
-    HighChol: bool
-    CholCheck: bool
-    BMI: int
-    Smoker: bool
-    Stroke: bool
-    Diabetes: int
-    PhysActivity: bool
-    Fruits: bool
-    Veggies: bool
-    HvyAlcoholConsump: bool
-    AnyHealthcare: bool
-    NoDocbcCost: bool
-    GenHlth: int
-    MentHlth: int
-    PhysHlth: int
-    DiffWalk: bool
-    Sex: bool
-    Age: int
-    Education: int
-    Income: int
+    highBP: bool
+    highChol: bool
+    cholCheck: bool
+    bmi: int
+    smoker: bool
+    stroke: bool
+    diabetes: int
+    physActivity: bool
+    fruits: bool
+    veggies: bool
+    hvyAlcoholConsump: bool
+    anyHealthcare: bool
+    noDocbcCost: bool
+    genHlth: int
+    mentHlth: int
+    physHlth: int
+    diffWalk: bool
+    sex: bool
+    age: int
+    education: int
+    income: int
 
 
 @app.post('/predict')
