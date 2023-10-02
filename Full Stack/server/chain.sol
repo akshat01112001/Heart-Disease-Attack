@@ -98,39 +98,38 @@
 pragma solidity ^0.8.0;
 
 struct HealthIndicators {
-    bool HighBP;
-    bool HighChol;
-    bool CholCheck;
-    uint8 BMI;
-    bool Smoker;
-    bool Stroke;
-    bool Diabetes;
-    bool PhysActivity;
-    bool Fruits;
-    bool Veggies;
-    bool HvyAlcoholConsump;
-    bool AnyHealthcare;
-    bool NoDocbcCost;
-    uint8 GenHlth;
-    uint8 MentHlth;
-    uint8 PhysHlth;
-    bool DiffWalk;
-    bool Sex;
-    uint8 Age;
-    uint8 Education;
-    uint256 Income;
+    bool highBP;
+    bool highChol;
+    bool cholCheck;
+    uint8 bmi;
+    bool smoker;
+    bool stroke;
+    bool diabetes;
+    bool physActivity;
+    bool fruits;
+    bool veggies;
+    bool hvyAlcoholConsump;
+    bool anyHealthcare;
+    bool noDocbcCost;
+    uint8 genHlth;
+    uint8 mentHlth;
+    uint8 physHlth;
+    bool diffWalk;
+    bool sex;
+    uint8 age;
+    uint8 education;
+    uint256 income;
+    bool prediction;
 }
 
 contract HeartDiseaseStorage {
     HealthIndicators[] public records;
 
-    function addHeartDiseaseRecord(
-        HealthIndicators memory indicators
-    ) external {
+    function addHeartDiseaseRecord(HealthIndicators memory indicators) public {
         records.push(indicators);
     }
 
-    function getNumRecords() external view returns (uint256) {
+    function getNumRecords() public view returns (uint256) {
         return records.length;
     }
 }
