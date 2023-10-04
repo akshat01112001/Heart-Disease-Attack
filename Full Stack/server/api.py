@@ -71,19 +71,20 @@ def predict(payload: PredictionInput):
 
         # # Convert the prediction to a format suitable for blockchain storage
         # prediction_hash = web3.to_hex(int(prediction))
-        print(web3.eth.get_block('latest'))
+        # print(web3.eth.get_block('latest'))
 
         # Call the addHeartDiseaseRecord function on the smart contract
         tx_hash = contract.functions.addHeartDiseaseRecord(input_data).transact(
             {'from': web3.eth.accounts[0], 'gas': web3.eth.get_block('latest').gasLimit, 'gasPrice': web3.eth.gas_price})
 
         # Wait for the transaction to be mined
-        web3.eth.wait_for_transaction_receipt(tx_hash)
-        print(web3.eth.get_block('latest'))
+        tx_receipt = web3.eth.wait_for_transaction_receipt(tx_hash)
+        # contract_address = tx_receipt['contractAddress']
+        print(tx_receipt)
 
-        # Call the getNumRecords function on the smart contract
-        num_records = contract.functions.getNumRecords().call(
-            {'from': web3.eth.accounts[0]})
+        # # Call the getNumRecords function on the smart contract
+        # num_records = contract.functions.getNumRecords().call(
+        #     {'from': web3.eth.accounts[0]})
 
         return {
             "prediction": prediction, 
