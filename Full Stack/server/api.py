@@ -17,7 +17,7 @@ origins = [
 
 # Connect to Ethereum node
 web3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
-contract_address = "0xff320483ea8070a392C32FBdD34E621113a1b839"
+contract_address = "0x047A0Fb36f738855327f1ED258a399919c19A205"
 with open('output/HeartDiseaseStorage.abi') as file:
     contract_abi = file.read()
 contract = web3.eth.contract(address=contract_address, abi=contract_abi)
