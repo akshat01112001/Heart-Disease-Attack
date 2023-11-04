@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Grid, TextField, Button, FormControl, FormGroup, FormLabel, Container, FormControlLabel, Checkbox } from '@mui/material'
+import Store from './store'
 
 const PatientForm = () => {
+    const [cid, setCid] = useState('')
     const [formData, setFormData] = useState({
         highBP: false,
         highChol: false,
@@ -23,10 +25,11 @@ const PatientForm = () => {
         sex: false,
         age: 0,
         education: 0,
-        income: 0
+        income: 0,
+        uploadedFile: ''
     })
 
-    const handleChange = (e) => {
+    const handleChange = async (e) => {
         let { name, value, type, checked } = e.target
         const newValue = type === 'checkbox' ? checked : value
 
@@ -44,6 +47,7 @@ const PatientForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        formData['uploadedFile'] = cid
         
         const response = await fetch('/predict', {
             method: 'POST',
@@ -319,6 +323,11 @@ const PatientForm = () => {
                                 onChange={handleChange}
                                 fullWidth
                                 required
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Store
+                                handleChange={setCid}
                             />
                         </Grid>
                     </FormControl>

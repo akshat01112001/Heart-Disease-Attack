@@ -120,6 +120,7 @@ struct HealthIndicators {
     uint8 education;
     uint256 income;
     bool prediction;
+    string uploadedFile;
 }
 
 contract HeartDiseaseStorage {

@@ -17,7 +17,7 @@ origins = [
 
 # Connect to Ethereum node
 web3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
-contract_address = "0x047A0Fb36f738855327f1ED258a399919c19A205"
+contract_address = "0xCFD6Ab57B6F1cb4200CD3F6865500b64AB42a672"
 with open('output/HeartDiseaseStorage.abi') as file:
     contract_abi = file.read()
 contract = web3.eth.contract(address=contract_address, abi=contract_abi)
@@ -55,6 +55,7 @@ class PredictionInput(BaseModel):
     age: int
     education: int
     income: int
+    uploadedFile: str
 
 
 @app.post('/predict')
@@ -62,7 +63,8 @@ def predict(payload: PredictionInput):
     try:
         # LR model loaded
         input_data = dict(payload)
-        prediction = model.predict([list(input_data.values())])[0]
+        print(list(input_data.values()))
+        prediction = model.predict([list(input_data.values())[:-1]])[0]
 
         if prediction == 0:
             input_data['prediction'] = False
