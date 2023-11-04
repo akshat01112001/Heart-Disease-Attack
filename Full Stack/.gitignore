@@ -4,7 +4,7 @@
 client/node_modules
 client/.pnp
 client/.pnp.js
-server/__pycache__
+Full Stack/server/__pycache__
 
 # testing
 client/coverage
